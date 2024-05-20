@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    *{
+      margin: 0%;
+      padding: 0%;
+    
+    }
+    header{
+      width: 100%;
+      background-color: #f5f1e6;
+    }
+ .scrolled{
+      background-color: black;
+      opacity: 0.98;
+      background-color: cornsilk;
+    }
+  .scrolled a{
+    color: palevioletred;
+  }
+   .navbar{
+    display: flex;
+    justify-content: space-around;
+    position:fixed;
+    left: 0;
+    right: 0;
+   
+   }
+   .navbar a:hover{
+    background-color: darkgray;
+    color: khaki;
+   }
+   .nav-left{
+    width: 10%;
+   }
+   .nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+   }
+   .nav-right a{
+    text-decoration: none;
+   }
+   .nav-icon{
+    position: fixed;
+    top: -1;
+    right: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    display: none;
+   }
+   @media(max-width:700px){
+    .navbar{
+      justify-content: space-between;
+      padding: 0px 20px 0px 20px;
+    }
+    .nav-icon{
+      display: flex;
+    }
+    .nav-right{
+      display: none;
+    } 
+    .nav-icon-i1{
+      background-color: #f5f1e6;
+      height: 250px;
+      width: 200px;
+      /* //display: flex; */
+      flex-direction: column;
+      justify-content: space-evenly;
+      display: none;
+    }
+    .nav-icon-i1 a{
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+    .section{
+      /* margin-top: 100px; */
+      height:400px;
+      
+    }
+   }
+  .section{
+       margin-top: 40px; 
+      height:600px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer{
+      width: 100%;
+      height: 100px;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+    .home{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url("https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-size: cover;
+/* background-repeat: no-repeat; */
+    }
+    .about{
+      background-image: url("https://images.unsplash.com/photo-1571624436279-b272aff752b5?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-size: cover; 
+    }
+    .eduction{
+      background-image: url("https://media.istockphoto.com/id/1589853994/photo/the-concept-of-visualization-brings-wisdom-and-creativity-creative-thinking-images-on-a-green.jpg?s=2048x2048&w=is&k=20&c=JNlRJt00a1VwUbQw8NJWeq2EcRmNg2HVH7_rJxzXvsY=");
+      background-size: cover; 
+    }
+    .project{
+      background-image: url("https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=2057&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-size: cover; 
+    }
+    /* .contect{
+      width: 40%;
+    } */
+    .input{
+      
+      padding-top: 100px;
+      border: 1px solid black;
+    }
+    input{
+      height: 40px;
+      margin: 5px;
+    }
+    button{
+      background-color: #e8970c;
+      height: 40px;
+      width: 150px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="nav-left"><H1>AD</H1></div>
+      <div class="nav-right">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Education</a>
+        <a href="#">Project</a>
+        <a href="#">Contect</a>
+      </div>
+      <div class="nav-icon">
+        <i onclick="sidebar()" class="fa-solid fa-bars"></i>
+          <div class="nav-icon-i1">  
+            <i onclick="sidebar()" class="fa-solid fa-xmark"></i>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Education</a>
+            <a href="#">Project</a>
+            <a href="#">Contect</a>
+          </div>
+      
+      </div>
+    </div>
+    <hr>
+  </header>
+
+  <main>
+ <div class="home section"></div ><hr>
+ <div class="about section"><H4>About</H4></div ><hr>
+ <div  class="eduction section"><H4>Eduction</H4></div ><hr>
+ <div  class="project section"><H4>Project</H4></div ><hr>
+ <div  class="contect section"><h4>Contect</h4>
+       <div class="input">
+        <label for="input">Enter your name : </label>
+        <input type="text" name="name" id="input"><br>
+        <label for="email">Enter your Email : </label>
+        <input type="email" name="email" id="email"><br>
+        <label for="info">Any Question  :</label>
+        <textarea name="description" id="info" rows="5" ></textarea><br>
+        <button>Submit</button>
+       </div>
+
+</div ><hr>
+  </main>
+  <footer>
+    <div class="footer">
+      <h4>©  All rights reserved.</h4>
+      <h5>Privacy | Site Map |Terms of Use| External Submission Policy| Sales terms and conditions |Anti-Slavery and Human Trafficking Statement</h5>
+    </div>
+  </footer>
+  <script>
+    let side=document.querySelector(".fa-bars");
+    let X=document.querySelector(".fa-xmark");
+    let div=document.querySelector(".nav-icon-i1");
+    let m=true;
+  const sidebar=()=>{
+  if(m){
+    console.log("clicked")
+     div.style.display="flex";
+     m=false;
+  }else{
+    console.log("clicked")
+     div.style.display="none";
+     m=true;
+  }
+  }
+ 
+  document.addEventListener("scroll",()=>{
+    let header=document.querySelector(".navbar");
+    if(window.scrollY>0){
+      header.classList.add("scrolled")
+    }else{
+      header.classList.remove("scrolled")
+    }
+  })
+  </script>
+</body>
+</html>
